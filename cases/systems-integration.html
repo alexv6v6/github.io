@@ -1,1 +1,267 @@
 
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems Integration | Alexander Valencia</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="container">
+    <nav>
+        <div class="logo">Alexander Valencia</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../methodology.html">Methodology</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container page-content">
+
+```
+<section class="page-header">
+    <h1>Designing business-driven systems integration</h1>
+    <p class="subtitle">
+        Defining information flows, business events, and integration requirements across
+        enterprise systems.
+    </p>
+</section>
+
+<section>
+
+    <h2>Overview</h2>
+
+    <p>
+        Integration projects often fail because they are treated as technical connections
+        between systems rather than business connections between processes.
+    </p>
+
+    <p>
+        This case study describes the functional design of integrations between an
+        enterprise information system and multiple external platforms, including
+        document management, financial, and institutional systems.
+    </p>
+
+    <p>
+        The objective was not simply to exchange data. The objective was to ensure that
+        information moved consistently across organizational processes while preserving
+        business meaning, process integrity, and operational traceability.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>The challenge</h2>
+
+    <p>
+        Multiple information systems supported different parts of the organization’s
+        operational environment.
+    </p>
+
+    <p>The integration architecture needed to coordinate:</p>
+
+    <ul>
+        <li>document management workflows,</li>
+        <li>financial and accounting processes,</li>
+        <li>institutional web services,</li>
+        <li>operational information systems,</li>
+        <li>external technology providers.</li>
+    </ul>
+
+    <p>
+        The challenge was not understanding every technical implementation detail.
+    </p>
+
+    <p>
+        The challenge was understanding how business processes crossed system boundaries.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>My role</h2>
+
+    <p>
+        My responsibility was to define the functional requirements for system
+        integrations from the perspective of business processes and information flows.
+    </p>
+
+    <p>This involved:</p>
+
+    <ul>
+        <li>understanding the operational processes involved,</li>
+        <li>identifying integration points,</li>
+        <li>defining information exchange requirements,</li>
+        <li>coordinating with external software providers,</li>
+        <li>validating integration behavior,</li>
+        <li>ensuring alignment between business needs and technical implementation.</li>
+    </ul>
+
+    <p>
+        The work focused on functional interoperability rather than technical implementation.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>The integration approach</h2>
+
+    <p>
+        The design process began by understanding the business event that required
+        integration.
+    </p>
+
+    <p>For each integration point, the analysis focused on:</p>
+
+    <ul>
+        <li>what business event triggered the exchange,</li>
+        <li>which system was the authoritative source,</li>
+        <li>which information needed to be shared,</li>
+        <li>how data consistency would be maintained,</li>
+        <li>what validation rules applied,</li>
+        <li>how process traceability would be preserved.</li>
+    </ul>
+
+    <p>
+        The integration model was designed around business events rather than isolated
+        technical interfaces.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Integration architecture</h2>
+
+    <p>
+        The integration design connected multiple enterprise systems through business-driven
+        information flows.
+    </p>
+
+    <div class="diagram-flow">
+
+        <div class="diagram-box">
+            <strong>Business process</strong>
+            <span>Regulatory and operational events</span>
+        </div>
+
+        <div class="diagram-arrow">→</div>
+
+        <div class="diagram-box">
+            <strong>Integration rules</strong>
+            <span>Business events, validations, and data ownership</span>
+        </div>
+
+        <div class="diagram-arrow">→</div>
+
+        <div class="diagram-box">
+            <strong>Enterprise systems</strong>
+            <span>Document, financial, and operational platforms</span>
+        </div>
+
+        <div class="diagram-arrow">→</div>
+
+        <div class="diagram-box">
+            <strong>Coordinated workflow</strong>
+            <span>Consistent information and process continuity</span>
+        </div>
+
+    </div>
+
+    <p class="diagram-caption">
+        Figure 1. Business-driven integration architecture connecting enterprise systems
+        through structured information flows.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Design decisions</h2>
+
+    <h3>Business-event orientation</h3>
+    <p>
+        Integrations were defined around process events rather than system endpoints.
+    </p>
+
+    <h3>Information ownership</h3>
+    <p>
+        The analysis identified which system was responsible for each piece of business
+        information.
+    </p>
+
+    <h3>Validation before synchronization</h3>
+    <p>
+        Information exchange requirements were validated functionally before technical
+        implementation.
+    </p>
+
+    <h3>Process continuity</h3>
+    <p>
+        Integration behavior was designed to preserve the continuity of the overall
+        business process across multiple systems.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>The result</h2>
+
+    <p>The resulting integration framework provided:</p>
+
+    <ul>
+        <li>clear definition of integration requirements,</li>
+        <li>improved coordination between software providers,</li>
+        <li>more consistent information exchange,</li>
+        <li>better process traceability across systems,</li>
+        <li>reduced ambiguity during implementation,</li>
+        <li>a foundation for future integration evolution.</li>
+    </ul>
+
+    <p>
+        More importantly, the project demonstrated that effective integration depends
+        less on interface technology and more on understanding business processes,
+        information ownership, and organizational workflows.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Design principle</h2>
+
+    <blockquote>
+        Enterprise integrations should be designed around business events and information
+        ownership before technical interfaces are defined.
+    </blockquote>
+
+    <p>
+        When integration requirements are modeled from the perspective of the business
+        process, systems become easier to coordinate, validate, and evolve.
+    </p>
+
+</section>
+```
+
+</main>
+
+<footer class="container footer">
+    <p>© 2026 Alexander Valencia</p>
+    <p>
+        <a href="../index.html">Home</a> ·
+        <a href="../about.html">About</a> ·
+        <a href="../methodology.html">Methodology</a>
+    </p>
+</footer>
+
+</body>
+</html>
