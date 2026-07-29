@@ -1,1 +1,136 @@
 
+# Designing a regulatory calculation engine
+
+## Translating complex regulatory rules into an information system
+
+### Overview
+
+Regulated industries often depend on calculations that must be applied consistently across thousands of transactions, while remaining aligned with evolving legal and technical frameworks.
+
+This case study describes the design of a regulatory calculation engine that transformed a complex administrative calculation process into a structured and maintainable information system.
+
+The objective was not simply to automate a calculation. The objective was to model regulatory knowledge in a way that could be implemented consistently, validated reliably, and evolved over time.
+
+---
+
+## The challenge
+
+The calculation process was governed by a regulatory framework that contained multiple variables, conditional rules, technical parameters, and exceptional scenarios.
+
+The primary challenges included:
+
+* interpreting regulatory requirements,
+* identifying the variables that influenced the calculation,
+* defining the relationships between those variables,
+* handling exceptions,
+* ensuring consistency across different operational scenarios,
+* supporting future regulatory changes.
+
+The greatest complexity was not computational.
+
+It was conceptual.
+
+The regulation described the calculation in legal and technical language, while the software required explicit and structured business rules.
+
+---
+
+## My role
+
+My responsibility was to design the functional logic that would later be implemented in the information system.
+
+This involved:
+
+* analyzing the regulatory framework,
+* identifying calculation variables,
+* modeling business rules,
+* defining decision logic,
+* validating calculation scenarios,
+* collaborating with technical teams during implementation,
+* supporting the evolution of the model over multiple years.
+
+The calculation engine was initially represented through database-level business logic and later evolved toward a dedicated functional module.
+
+---
+
+## The design approach
+
+The first step was to separate the regulatory knowledge from the implementation technology.
+
+Instead of focusing on SQL, the analysis focused on understanding:
+
+* what the regulation required,
+* how users applied the rules,
+* which decisions were deterministic,
+* which scenarios required exceptions,
+* how the calculation should be validated.
+
+The calculation was decomposed into explicit business rules.
+
+Each rule was modeled independently before being integrated into the overall calculation process.
+
+This significantly reduced ambiguity during implementation.
+
+---
+
+## Information model
+
+The calculation engine required a structured representation of:
+
+* regulatory parameters,
+* operational variables,
+* user classifications,
+* technical conditions,
+* temporal conditions,
+* calculation outcomes,
+* validation states.
+
+The objective was to create a model where regulatory logic could be traced and audited.
+
+---
+
+## Design decisions
+
+Several design decisions proved particularly important.
+
+### Explicit business rules
+
+Regulatory logic was documented as business rules rather than implicit implementation behavior.
+
+### Separation of variables
+
+Calculation variables were identified independently of database implementation.
+
+### Validation-first approach
+
+Representative calculation scenarios were validated before implementation.
+
+### Evolution-oriented design
+
+The model was designed with the expectation that regulations would change.
+
+This reduced the long-term cost of maintaining the calculation engine.
+
+---
+
+## The result
+
+The resulting system provided:
+
+* consistent application of regulatory calculations,
+* reduced manual interpretation,
+* improved traceability,
+* easier validation,
+* greater maintainability,
+* a foundation for future functional evolution.
+
+More importantly, the project demonstrated that the central problem was not software development.
+
+It was knowledge modeling.
+
+---
+
+## Design principle
+
+**Complex regulatory calculations should be modeled as business rule systems rather than embedded directly into implementation logic.**
+
+When regulatory knowledge is modeled explicitly, software becomes easier to validate, maintain, and evolve.
