@@ -89,11 +89,11 @@ padding: 96px 0 72px;
 }
 
 .hero h1 {
-font-size: clamp(2.6rem, 5vw, 4rem);
-line-height: 1.08;
-font-weight: 700;
-letter-spacing: -0.035em;
-max-width: 840px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    max-width: 760px;
 }
 
 .subtitle {
