@@ -1,136 +1,300 @@
+<!DOCTYPE html>
 
-# Designing a regulatory calculation engine
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulatory Calculation Engine | Alexander Valencia</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
 
-## Translating complex regulatory rules into an information system
+<header class="container">
+    <nav>
+        <div class="logo">Alexander Valencia</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../methodology.html">Methodology</a>
+        </div>
+    </nav>
+</header>
 
-### Overview
+<main class="container page-content">
 
-Regulated industries often depend on calculations that must be applied consistently across thousands of transactions, while remaining aligned with evolving legal and technical frameworks.
+```
+<section class="page-header">
+    <h1>Designing a regulatory calculation engine</h1>
+    <p class="subtitle">
+        Translating complex regulatory rules into a maintainable and auditable information system.
+    </p>
+</section>
 
-This case study describes the design of a regulatory calculation engine that transformed a complex administrative calculation process into a structured and maintainable information system.
+<section>
 
-The objective was not simply to automate a calculation. The objective was to model regulatory knowledge in a way that could be implemented consistently, validated reliably, and evolved over time.
+    <h2>Overview</h2>
 
----
+    <p>
+        Many regulated industries depend on calculations that must be applied consistently,
+        transparently, and in accordance with evolving legal and technical frameworks.
+    </p>
 
-## The challenge
+    <p>
+        This case study describes the design of a regulatory calculation engine that
+        transformed a complex administrative calculation process into a structured and
+        maintainable information system.
+    </p>
 
-The calculation process was governed by a regulatory framework that contained multiple variables, conditional rules, technical parameters, and exceptional scenarios.
+    <p>
+        The objective was not simply to automate a calculation. The objective was to model
+        regulatory knowledge in a way that could be implemented consistently, validated
+        reliably, and evolved over time.
+    </p>
 
-The primary challenges included:
+</section>
 
-* interpreting regulatory requirements,
-* identifying the variables that influenced the calculation,
-* defining the relationships between those variables,
-* handling exceptions,
-* ensuring consistency across different operational scenarios,
-* supporting future regulatory changes.
+<section>
 
-The greatest complexity was not computational.
+    <h2>The challenge</h2>
 
-It was conceptual.
+    <p>
+        The calculation process was governed by a regulatory framework containing multiple
+        variables, conditional rules, technical parameters, and exceptional scenarios.
+    </p>
 
-The regulation described the calculation in legal and technical language, while the software required explicit and structured business rules.
+    <p>The primary challenges included:</p>
 
----
+    <ul>
+        <li>interpreting regulatory requirements,</li>
+        <li>identifying calculation variables,</li>
+        <li>defining relationships between variables,</li>
+        <li>handling exceptional scenarios,</li>
+        <li>ensuring consistency across operational contexts,</li>
+        <li>supporting future regulatory changes.</li>
+    </ul>
 
-## My role
+    <p>
+        The greatest complexity was not computational.
+    </p>
 
-My responsibility was to design the functional logic that would later be implemented in the information system.
+    <p>
+        It was conceptual.
+    </p>
 
-This involved:
+    <p>
+        The regulation described the calculation in legal and technical language, while
+        the software required explicit and structured business rules.
+    </p>
 
-* analyzing the regulatory framework,
-* identifying calculation variables,
-* modeling business rules,
-* defining decision logic,
-* validating calculation scenarios,
-* collaborating with technical teams during implementation,
-* supporting the evolution of the model over multiple years.
+</section>
 
-The calculation engine was initially represented through database-level business logic and later evolved toward a dedicated functional module.
+<section>
 
----
+    <h2>My role</h2>
 
-## The design approach
+    <p>
+        My responsibility was to design the functional logic that would later be
+        implemented in the information system.
+    </p>
 
-The first step was to separate the regulatory knowledge from the implementation technology.
+    <p>This involved:</p>
 
-Instead of focusing on SQL, the analysis focused on understanding:
+    <ul>
+        <li>analyzing the regulatory framework,</li>
+        <li>identifying calculation variables,</li>
+        <li>modeling business rules,</li>
+        <li>defining decision logic,</li>
+        <li>validating calculation scenarios,</li>
+        <li>collaborating with technical teams during implementation,</li>
+        <li>supporting the evolution of the model over multiple years.</li>
+    </ul>
 
-* what the regulation required,
-* how users applied the rules,
-* which decisions were deterministic,
-* which scenarios required exceptions,
-* how the calculation should be validated.
+    <p>
+        The calculation engine was initially represented through database-level business
+        logic and later evolved toward a dedicated functional module.
+    </p>
 
-The calculation was decomposed into explicit business rules.
+</section>
 
-Each rule was modeled independently before being integrated into the overall calculation process.
+<section>
 
-This significantly reduced ambiguity during implementation.
+    <h2>The design approach</h2>
 
----
+    <p>
+        The first step was to separate regulatory knowledge from implementation technology.
+    </p>
 
-## Information model
+    <p>Instead of focusing on SQL, the analysis focused on understanding:</p>
 
-The calculation engine required a structured representation of:
+    <ul>
+        <li>what the regulation required,</li>
+        <li>how users applied the rules,</li>
+        <li>which decisions were deterministic,</li>
+        <li>which scenarios required exceptions,</li>
+        <li>how the calculation should be validated.</li>
+    </ul>
 
-* regulatory parameters,
-* operational variables,
-* user classifications,
-* technical conditions,
-* temporal conditions,
-* calculation outcomes,
-* validation states.
+    <p>
+        The calculation was decomposed into explicit business rules. Each rule was modeled
+        independently before being integrated into the overall calculation process.
+    </p>
 
-The objective was to create a model where regulatory logic could be traced and audited.
+    <p>
+        This significantly reduced ambiguity during implementation.
+    </p>
 
----
+</section>
 
-## Design decisions
+<section>
 
-Several design decisions proved particularly important.
+    <h2>Design model</h2>
 
-### Explicit business rules
+    <p>
+        The calculation engine was designed by separating regulatory knowledge from
+        implementation logic. The following model summarizes the transformation process
+        from regulation to software.
+    </p>
 
-Regulatory logic was documented as business rules rather than implicit implementation behavior.
+    <div class="diagram-flow">
 
-### Separation of variables
+        <div class="diagram-box">
+            <strong>Regulatory framework</strong>
+            <span>Legal and technical requirements</span>
+        </div>
 
-Calculation variables were identified independently of database implementation.
+        <div class="diagram-arrow">→</div>
 
-### Validation-first approach
+        <div class="diagram-box">
+            <strong>Business rules</strong>
+            <span>Variables, conditions, and decision logic</span>
+        </div>
 
-Representative calculation scenarios were validated before implementation.
+        <div class="diagram-arrow">→</div>
 
-### Evolution-oriented design
+        <div class="diagram-box">
+            <strong>Information model</strong>
+            <span>Entities, relationships, and state transitions</span>
+        </div>
 
-The model was designed with the expectation that regulations would change.
+        <div class="diagram-arrow">→</div>
 
-This reduced the long-term cost of maintaining the calculation engine.
+        <div class="diagram-box">
+            <strong>Validation</strong>
+            <span>Scenarios, prototypes, and rule verification</span>
+        </div>
 
----
+        <div class="diagram-arrow">→</div>
 
-## The result
+        <div class="diagram-box">
+            <strong>Implementation</strong>
+            <span>SQL, application modules, and system integration</span>
+        </div>
 
-The resulting system provided:
+    </div>
 
-* consistent application of regulatory calculations,
-* reduced manual interpretation,
-* improved traceability,
-* easier validation,
-* greater maintainability,
-* a foundation for future functional evolution.
+    <p class="diagram-caption">
+        Figure 1. Knowledge-driven design flow used to translate regulatory requirements
+        into an implementable information system.
+    </p>
 
-More importantly, the project demonstrated that the central problem was not software development.
+</section>
 
-It was knowledge modeling.
+<section>
 
----
+    <h2>Information model</h2>
 
-## Design principle
+    <p>The calculation engine required a structured representation of:</p>
 
-**Complex regulatory calculations should be modeled as business rule systems rather than embedded directly into implementation logic.**
+    <ul>
+        <li>regulatory parameters,</li>
+        <li>operational variables,</li>
+        <li>user classifications,</li>
+        <li>technical conditions,</li>
+        <li>temporal conditions,</li>
+        <li>calculation outcomes,</li>
+        <li>validation states.</li>
+    </ul>
 
-When regulatory knowledge is modeled explicitly, software becomes easier to validate, maintain, and evolve.
+    <p>
+        The objective was to create a model where regulatory logic could be traced and audited.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Design decisions</h2>
+
+    <h3>Explicit business rules</h3>
+    <p>Regulatory logic was documented as business rules rather than implicit implementation behavior.</p>
+
+    <h3>Separation of variables</h3>
+    <p>Calculation variables were identified independently of database implementation.</p>
+
+    <h3>Validation-first approach</h3>
+    <p>Representative calculation scenarios were validated before implementation.</p>
+
+    <h3>Evolution-oriented design</h3>
+    <p>
+        The model was designed with the expectation that regulations would change,
+        reducing the long-term cost of maintaining the calculation engine.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>The result</h2>
+
+    <p>The resulting system provided:</p>
+
+    <ul>
+        <li>consistent application of regulatory calculations,</li>
+        <li>reduced manual interpretation,</li>
+        <li>improved traceability,</li>
+        <li>easier validation,</li>
+        <li>greater maintainability,</li>
+        <li>a foundation for future functional evolution.</li>
+    </ul>
+
+    <p>
+        More importantly, the project demonstrated that the central problem was not
+        software development.
+    </p>
+
+    <p>
+        It was knowledge modeling.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Design principle</h2>
+
+    <blockquote>
+        Complex regulatory calculations should be modeled as business rule systems
+        rather than embedded directly into implementation logic.
+    </blockquote>
+
+    <p>
+        When regulatory knowledge is modeled explicitly, software becomes easier to
+        validate, maintain, and evolve.
+    </p>
+
+</section>
+```
+
+</main>
+
+<footer class="container footer">
+    <p>© 2026 Alexander Valencia</p>
+    <p>
+        <a href="../index.html">Home</a> ·
+        <a href="../about.html">About</a> ·
+        <a href="../methodology.html">Methodology</a>
+    </p>
+</footer>
+
+</body>
+</html>
