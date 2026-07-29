@@ -1,1 +1,158 @@
 
+# Methodology
+
+## Knowledge-Driven Systems Design
+
+Most software projects begin with technology decisions. I begin with knowledge.
+
+Over the years I have found that the greatest source of failure in complex software projects is not the programming language, the framework, or the infrastructure. It is the gap between how a domain works and how that domain is represented in a system.
+
+My approach focuses on reducing that gap.
+
+The objective is to transform business knowledge, regulatory frameworks, operational processes, and decision rules into a structured model that can be implemented consistently, validated systematically, and evolved over time.
+
+This approach has been shaped by my experience designing information systems for complex regulatory and operational environments, where the quality of the specification often determines the quality of the implementation.
+
+## The design process
+
+### 1. Understand the domain
+
+The first objective is not to design a system. It is to understand the problem.
+
+This includes:
+
+* business objectives,
+* regulatory context,
+* operational constraints,
+* stakeholders,
+* decision points,
+* exceptions,
+* information flows.
+
+The goal is to identify the knowledge that the organization relies on to perform the process.
+
+### 2. Model the information
+
+Once the domain is understood, the next step is to structure the information.
+
+This involves identifying:
+
+* business entities,
+* relationships,
+* attributes,
+* lifecycle states,
+* transitions,
+* dependencies.
+
+The information model becomes the foundation of the system.
+
+### 3. Define business rules
+
+Business rules should be explicit.
+
+Instead of embedding knowledge directly into implementation, the objective is to identify:
+
+* calculation rules,
+* validation rules,
+* decision criteria,
+* regulatory conditions,
+* exception handling,
+* process constraints.
+
+A well-defined business rule model reduces ambiguity during implementation.
+
+### 4. Design the functional behavior
+
+The functional design describes how the system should behave.
+
+This includes:
+
+* workflows,
+* user interactions,
+* state transitions,
+* approvals,
+* integrations,
+* notifications,
+* reporting requirements.
+
+At this stage, the system is defined independently of implementation technology.
+
+### 5. Validate the specification
+
+Before implementation begins, the specification must be tested conceptually.
+
+I often use:
+
+* functional prototypes,
+* workflow simulations,
+* rule validation,
+* scenario analysis,
+* stakeholder reviews.
+
+The objective is to discover ambiguity before software development.
+
+### 6. Implement with technology
+
+Only after the knowledge model is sufficiently clear does implementation become efficient.
+
+Depending on the problem, implementation may involve:
+
+* SQL,
+* Python,
+* APIs,
+* RAG architectures,
+* Text-to-SQL,
+* workflow automation,
+* AI-assisted development.
+
+Technology becomes the implementation layer of a previously validated knowledge model.
+
+### 7. Evaluate and evolve
+
+A system is not a static artifact.
+
+The final stage focuses on:
+
+* information quality,
+* user feedback,
+* process evolution,
+* regulatory changes,
+* performance indicators,
+* continuous refinement.
+
+The model should be designed to evolve without requiring complete redesign.
+
+## Why AI matters
+
+Artificial intelligence is a powerful accelerator, but it does not replace domain understanding.
+
+In my work, AI is used to:
+
+* accelerate information analysis,
+* generate prototypes,
+* assist specification development,
+* improve knowledge retrieval,
+* support testing,
+* reduce repetitive implementation work.
+
+The quality of AI-assisted development depends heavily on the quality of the underlying specification.
+
+## A simple principle
+
+One principle summarizes this methodology:
+
+**Business logic is independent of implementation technology.**
+
+A calculation remains the same whether it is implemented in SQL, Python, Java, or another language.
+
+The real challenge is understanding the rule.
+
+That is why I focus on modeling knowledge first and implementing technology second.
+
+## The role of case studies
+
+The case studies in this portfolio are examples of this methodology applied to real-world problems.
+
+They are presented in a generalized form to respect confidentiality, but each one reflects the same underlying process:
+
+understand → model → specify → validate → implement → evolve.
