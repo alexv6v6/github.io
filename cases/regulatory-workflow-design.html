@@ -1,1 +1,290 @@
 
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulatory Workflow Design | Alexander Valencia</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="container">
+    <nav>
+        <div class="logo">Alexander Valencia</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../methodology.html">Methodology</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container page-content">
+
+```
+<section class="page-header">
+    <h1>Designing a regulatory workflow</h1>
+    <p class="subtitle">
+        Modeling entities, state transitions, and business processes for a complex
+        multi-stage regulatory procedure.
+    </p>
+</section>
+
+<section>
+
+    <h2>Overview</h2>
+
+    <p>
+        Workflow systems are often designed around forms and screens. I approach them
+        differently.
+    </p>
+
+    <p>
+        A workflow is a representation of how an organization makes decisions, moves
+        information, assigns responsibilities, and manages the lifecycle of a process.
+    </p>
+
+    <p>
+        This case study describes the design of a multi-stage regulatory workflow,
+        including process modeling, state transitions, business rules, and the functional
+        architecture required to support long-term process evolution.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>The challenge</h2>
+
+    <p>
+        The procedure involved multiple actors, sequential and conditional stages,
+        regulatory requirements, document dependencies, and formal decision points.
+    </p>
+
+    <p>The system needed to:</p>
+
+    <ul>
+        <li>represent the complete process lifecycle,</li>
+        <li>control transitions between stages,</li>
+        <li>preserve process traceability,</li>
+        <li>support regulatory compliance,</li>
+        <li>allow future process evolution,</li>
+        <li>avoid excessive rigidity in the initial design.</li>
+    </ul>
+
+    <p>
+        The greatest challenge was balancing regulatory structure with operational flexibility.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>My role</h2>
+
+    <p>
+        My responsibility was to design the functional architecture of the workflow before
+        implementation.
+    </p>
+
+    <p>This involved:</p>
+
+    <ul>
+        <li>analyzing the regulatory procedure,</li>
+        <li>identifying process entities,</li>
+        <li>defining workflow states,</li>
+        <li>designing state transitions,</li>
+        <li>specifying business rules,</li>
+        <li>modeling process dependencies,</li>
+        <li>supporting functional validation before delivery.</li>
+    </ul>
+
+    <p>
+        The work focused on creating a process model that accurately represented the
+        underlying business procedure.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>The design approach</h2>
+
+    <p>
+        Rather than designing individual screens, the process was modeled as a state-driven
+        system.
+    </p>
+
+    <p>The design began with questions such as:</p>
+
+    <ul>
+        <li>What entities exist?</li>
+        <li>What events change the state of the process?</li>
+        <li>Which transitions are allowed?</li>
+        <li>Which transitions require validation?</li>
+        <li>What information is required at each stage?</li>
+        <li>How should the process evolve over time?</li>
+    </ul>
+
+    <p>
+        The workflow was designed independently of implementation technology, allowing
+        the process logic to remain stable even as technical implementation evolved.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Workflow architecture</h2>
+
+    <p>
+        The process was modeled around entities, states, transitions, and validation rules.
+    </p>
+
+    <div class="diagram-flow">
+
+        <div class="diagram-box">
+            <strong>Process definition</strong>
+            <span>Regulatory stages and business objectives</span>
+        </div>
+
+        <div class="diagram-arrow">→</div>
+
+        <div class="diagram-box">
+            <strong>State model</strong>
+            <span>Entities, lifecycle states, and transitions</span>
+        </div>
+
+        <div class="diagram-arrow">→</div>
+
+        <div class="diagram-box">
+            <strong>Business rules</strong>
+            <span>Validation, approvals, and process constraints</span>
+        </div>
+
+        <div class="diagram-arrow">→</div>
+
+        <div class="diagram-box">
+            <strong>Functional specification</strong>
+            <span>Workflow behavior and implementation requirements</span>
+        </div>
+
+    </div>
+
+    <p class="diagram-caption">
+        Figure 1. Transformation of a regulatory procedure into a structured workflow architecture.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Information model</h2>
+
+    <p>The workflow required modeling:</p>
+
+    <ul>
+        <li>core business entities,</li>
+        <li>process stages,</li>
+        <li>state transitions,</li>
+        <li>document relationships,</li>
+        <li>responsibility assignments,</li>
+        <li>validation conditions,</li>
+        <li>historical process events.</li>
+    </ul>
+
+    <p>
+        The information model became the foundation for both workflow behavior and
+        reporting capabilities.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Design decisions</h2>
+
+    <h3>State-driven architecture</h3>
+    <p>
+        The workflow was modeled around process states rather than interface components.
+    </p>
+
+    <h3>Controlled flexibility</h3>
+    <p>
+        The design intentionally avoided hard-coding excessive regulatory detail,
+        allowing the process to evolve incrementally.
+    </p>
+
+    <h3>Explicit transitions</h3>
+    <p>
+        State transitions were defined explicitly, improving traceability and reducing
+        ambiguity during implementation.
+    </p>
+
+    <h3>Separation of process and technology</h3>
+    <p>
+        The process model was defined independently of the implementation platform,
+        improving long-term maintainability.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>The result</h2>
+
+    <p>The resulting workflow architecture provided:</p>
+
+    <ul>
+        <li>a coherent process model,</li>
+        <li>clear state transitions,</li>
+        <li>improved functional validation,</li>
+        <li>better alignment between business and technical teams,</li>
+        <li>greater process traceability,</li>
+        <li>a foundation for future regulatory and operational evolution.</li>
+    </ul>
+
+    <p>
+        More importantly, the project demonstrated that workflow design is fundamentally
+        a knowledge modeling activity.
+    </p>
+
+    <p>
+        The system became a representation of organizational behavior rather than a
+        collection of software features.
+    </p>
+
+</section>
+
+<section>
+
+    <h2>Design principle</h2>
+
+    <blockquote>
+        Workflow systems should model organizational behavior before implementing
+        interface behavior.
+    </blockquote>
+
+    <p>
+        A well-designed state model creates consistency, traceability, and long-term
+        adaptability across the entire lifecycle of a business process.
+    </p>
+
+</section>
+```
+
+</main>
+
+<footer class="container footer">
+    <p>© 2026 Alexander Valencia</p>
+    <p>
+        <a href="../index.html">Home</a> ·
+        <a href="../about.html">About</a> ·
+        <a href="../methodology.html">Methodology</a>
+    </p>
+</footer>
+
+</body>
+</html>
